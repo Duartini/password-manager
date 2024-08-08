@@ -1,0 +1,23 @@
+name: Validate Configuration
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Validate Docker Compose file
+      run: docker-compose -f docker-compose.yml config
+
+    - name: Validate Nginx configuration
+      run: nginx -t -c nginx/default.conf
