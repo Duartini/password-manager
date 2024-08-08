@@ -1,8 +1,7 @@
 /** @type {import('eslint').Linter.Config} */
-module.exports = {
+const eslintConfig = {
   languageOptions: {
     globals: {
-      // Define global variables for your files here
       browser: true,
       es2021: true,
     },
@@ -14,15 +13,17 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    'react',
-  ],
+  plugins: {
+    react: require('eslint-plugin-react'),
+  },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
   ],
   rules: {
-    'no-unused-vars': ['warn', { 'argsIgnorePattern': '^_' }],
+    'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     'react/prop-types': 'off',
   },
 };
+
+module.exports = eslintConfig;
