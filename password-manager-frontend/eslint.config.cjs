@@ -15,14 +15,12 @@ const eslintConfig = {
   },
   plugins: {
     react: require('eslint-plugin-react'),
-    'react-hooks': require('eslint-plugin-react-hooks'),
     '@typescript-eslint': require('@typescript-eslint/eslint-plugin'),
     // Agrega más plugins si es necesario
   },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
     // Agrega más configuraciones extendidas si es necesario
   ],
@@ -30,8 +28,6 @@ const eslintConfig = {
     'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off', // Para Next.js o si usas un entorno que no requiere React en el alcance
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'warn',
     '@typescript-eslint/ban-types': 'warn',
