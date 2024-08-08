@@ -23,8 +23,8 @@ jobs:
 
     - name: Install frontend dependencies
       working-directory: password-manager-frontend
-      run: yarn start
+      run: yarn install
 
     - name: Build frontend
       working-directory: password-manager-frontend
-      run: yarn build
+      run: yarn start
