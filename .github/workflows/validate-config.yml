@@ -38,4 +38,7 @@ jobs:
       run: docker-compose -f docker-compose.yml config
 
     - name: Validate Nginx configuration
-      run: nginx -t -c nginx/default.conf
+      run: |
+        sudo mkdir -p /etc/nginx
+        sudo cp nginx/default.conf /etc/nginx/default.conf
+        sudo nginx -t -c /etc/nginx/default.conf
