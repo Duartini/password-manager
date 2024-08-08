@@ -21,11 +21,26 @@ jobs:
       with:
         node-version: '18'
 
-    - name: Install dependencies
+    - name: Install frontend dependencies
+      working-directory: password-manager-frontend
       run: yarn install
 
-    - name: Lint code
+    - name: Install backend dependencies
+      working-directory: password-manager-backend
+      run: yarn install
+
+    - name: Lint frontend code
+      working-directory: password-manager-frontend
       run: yarn lint
 
-    - name: Run tests
+    - name: Lint backend code
+      working-directory: password-manager-backend
+      run: yarn lint
+
+    - name: Run frontend tests
+      working-directory: password-manager-frontend
+      run: yarn test
+
+    - name: Run backend tests
+      working-directory: password-manager-backend
       run: yarn test
