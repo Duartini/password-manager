@@ -27,7 +27,7 @@ jobs:
 
     - name: Lint frontend code
       working-directory: password-manager-frontend
-      run: yarn lint
+      run: yarn eslint
 
     - name: Install backend dependencies
       working-directory: password-manager-backend
