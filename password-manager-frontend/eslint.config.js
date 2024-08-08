@@ -1,6 +1,4 @@
-import { defineConfig } from 'eslint';
-
-export default defineConfig({
+module.exports = {
   env: {
     browser: true,
     es2021: true
@@ -23,4 +21,4 @@ export default defineConfig({
   rules: {
     'react/react-in-jsx-scope': 'off'
   }
-});
+};
