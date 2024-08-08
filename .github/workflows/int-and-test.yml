@@ -25,15 +25,15 @@ jobs:
       working-directory: password-manager-frontend
       run: yarn install
 
-    - name: Install backend dependencies
-      working-directory: password-manager-backend
-      run: yarn install
-
     - name: Lint frontend code
       working-directory: password-manager-frontend
       run: yarn lint
 
+    - name: Install backend dependencies
+      working-directory: password-manager-backend
+      run: yarn install
+
     - name: Lint backend code
       working-directory: password-manager-backend
-      run: yarn 
-      
+      run: yarn lint
+
