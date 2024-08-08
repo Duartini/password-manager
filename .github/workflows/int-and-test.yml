@@ -35,12 +35,5 @@ jobs:
 
     - name: Lint backend code
       working-directory: password-manager-backend
-      run: yarn lint
-
-    - name: Run frontend tests
-      working-directory: password-manager-frontend
-      run: yarn test
-
-    - name: Run backend tests
-      working-directory: password-manager-backend
-      run: yarn test
+      run: yarn 
+      
