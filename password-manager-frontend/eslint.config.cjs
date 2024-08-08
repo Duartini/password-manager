@@ -1,27 +1,28 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-  },
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-  ],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
+  languageOptions: {
+    globals: {
+      // Define global variables for your files here
+      browser: true,
+      es2021: true,
     },
-    ecmaVersion: 12,
-    sourceType: 'module',
+    parserOptions: {
+      ecmaVersion: 12,
+      sourceType: 'module',
+      ecmaFeatures: {
+        jsx: true,
+      },
+    },
   },
   plugins: [
     'react',
   ],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+  ],
   rules: {
-    // Personaliza tus reglas aquí
     'no-unused-vars': ['warn', { 'argsIgnorePattern': '^_' }],
     'react/prop-types': 'off',
-    // Agrega más reglas según tus necesidades
   },
 };
