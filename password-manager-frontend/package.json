@@ -2,6 +2,7 @@
   "name": "password-manager",
   "version": "1.0.0",
   "main": "main.jsx",
+  "type": "module",
   "scripts": {
     "start": "vite",
     "build": "vite build",
