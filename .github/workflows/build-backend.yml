@@ -27,4 +27,4 @@ jobs:
 
     - name: Build backend
       working-directory: password-manager-backend
-      run: yarn build
+      run: yarn start
