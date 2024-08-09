@@ -12,53 +12,51 @@
 - **Scalability**: Thanks to Docker, it is easy to scale the different components according to demand.
 - **Enhanced Security**: By using containers, each component is isolated, reducing the risk of vulnerabilities.
 
+## Installation and Configuration
 
-## Instalación y Configuración
+### Pre-requisites
+- Have Docker and Docker Compose installed.
 
-### Pre-requisitos
-- Tener Docker y Docker Compose instalados.
-
-### Inicialización
-1. Clonar el repositorio desde GitHub:
+### Initialization
+1. Clone the repository from GitHub:
     ```bash
     git clone https://github.com/Duartini/password-manager.git
     ```
     
-2. Navegar al directorio del proyecto:
+2. Navigate to the project directory:
     ```bash
     cd password-manager
     ```
     
-3. Construir y arrancar los contenedores Docker:
+3. Build and start the Docker containers:
     ```bash
     docker compose up -d --build
     ```
 
-### Acceder a la base de datos
-1. Acceder al contenedor de la base de datos:
+### Access the database
+1. Access the database container:
     ```bash
-    docker exec -it <nombre_contenedor>-db-1 /bin/sh
+    docker exec -it <container_name>-db-1 /bin/sh
     ```
     
-2. Conectarse a PostgreSQL:
+2. Connect to PostgreSQL:
     ```bash
     psql -U user -d password_manager
     ```
     
 
-
-### Visualización de datos
-1. Listar todas las tablas:
+### Data display
+1. List all tables:
     ```sql
     \dt
     ```
     
-2. Mostrar todos los usuarios:
+2. Display all users:
     ```sql
     SELECT * FROM users;
     ```
     
-3. Mostrar todas las contraseñas:
+3. Display all passwords:
     ```sql
     SELECT * FROM passwords;
     ```
